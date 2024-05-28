@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+::selection {
+    background-color: #FEC260;
+}
+
+.bg-pink {
+    background-color: #F7ECDE;
+}
+
+h1 {
+    font-family: "Pacifico", cursive;
+    font-size: 50px;
+    font-weight: 500;
+    color: #352E28;
+    position: relative;
+    display: inline-block;
+}
+h1::before{
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    width: 100%;
+    height: 15%;
+    background-color:#FEC260 ;
+    z-index: -1;
+    transition: all 0.3s;
+}
+h1:hover::before{
+    height: 30%;
+}
+
+h2 {
+    font-family: "Righteous", sans-serif;
+    color: #212529;
+    font-size: 25px;
+    font-weight: 500;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.site-body {
+    font-family: "PT Sans Caption", sans-serif;
+    border: 2px dotted #352E28;
+    border-right: none;
+    border-left: none;
+
+}
+.form-control{
+    color: #212529;
+    border: 1px solid #ced4da;
+}
+
+.btn-submit {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #d1512d;
+    --bs-btn-border-color: #d1512d;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #bb4120;
+    --bs-btn-hover-border-color: #a03315;
+}
+
+.form-control:focus {
+    border-color: #d99c39;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
+
+
+.btn-visit {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #9eb23b;
+    --bs-btn-border-color: #9eb23b;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #8a9e23;
+    --bs-btn-hover-border-color: #6e8018;
+}
+.btn-delete {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #eb1d36;
+    --bs-btn-border-color: #eb1d36;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #d30820;
+    --bs-btn-hover-border-color: #ba081d;
+}
+table{
+    font-family:"PT Sans Caption", sans-serif;
+    
+}
+
+form .sites{
+    position: relative;
+}
+form .sites span {
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
+}
+
+
+
+.bg-error {
+    background-color: #0007;
+}
+
+.submitError{
+    width: 90%; 
+    /* height: 250px; */
+    background-color: white;
+    
+    z-index: 2;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  
+}
+.green{
+    background-color: #4DB748;
+}
+.pink{
+    background-color: #F15F5D;
+}
+.yellow{
+    background-color: #FEBE2E;
+}
+.fa-xmark{
+    cursor: pointer;
+    color:#212529;
+    font-size: 25px;
+}
+.info{
+    font-family: "Bree Serif", serif;
+    color: #352E28;
+    font-size: 21px;
+   
+}
+p i{
+    color :#BB4120;
+    font-size: 18px;
+}
+.info-details{
+    color: #212529;
+    font-size: 18px;
+    font-family:"PT Sans Caption", sans-serif;
+}

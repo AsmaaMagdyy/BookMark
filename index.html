@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+</head>
+<link rel="icon" href="./images/bookmark.png">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&display=swap"
+    rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/all.min.css">
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/style.css">
+
+<body class="bg-pink">
+    <div class="container text-center pt-5 ">
+        <h1 class="pb-5">Bookmarker</h1>
+        <div class="site-body mb-4">
+            <h2 class="py-4">
+                <i class="fa-solid fa-bookmark"></i>
+                Bookmark your favorite sites
+                <i class="fa-solid fa-bookmark"></i>
+            </h2>
+            <div class="col-12">
+                <div class="inner">
+                    <form>
+                        <div class="sites site-name text-start mb-3">
+                            <label for="siteName" class="form-label fw-semibold">
+                                <i class="fa-solid fa-book-bookmark pe-2"></i>Site Name</label>
+                            <input type="text" class="form-control" id="siteName" name="site-name"
+                                placeholder="Bookmark Name" oninput="validation(this)" required>
+                            <!-- <span id="siteNameError"></span> -->
+
+                        </div>
+                        <div class="sites site-url text-start mb-3">
+                            <label for="siteUrl" class="form-label fw-semibold">
+                                <i class="fa-solid fa-link pe-2"></i>Site Url</label>
+                            <input type="url" class="form-control" id="siteUrl" name="site-url"
+                                placeholder="Website URL" oninput="validation(this)" required>
+                            <!-- <span id="siteUrlError"></span> -->
+                        </div>
+                        <button id="submitBtn" class="btn btn-submit px-5 mb-3">Submit</button>
+
+
+                    </form>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <table class="table">
+            
+                <thead>
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+        </table>
+    </div>
+    
+    <div id="errorLayer"
+        class="position-absolute top-0 error-layer d-none w-100 vh-100 d-flex justify-content-center align-items-center bg-error ">
+
+        <div class="inner ">
+            <div id="errorWindow" class=" m-auto submitError rounded rounded-3 p-4 text-start ">
+                <div class="d-flex justify-content-between align-items-baseline ">
+                    <div class="d-flex gap-2">
+                        <div class="circle pink"></div>
+                        <div class="circle yellow"></div>
+                        <div class="circle green"></div>
+                    </div>
+                    <i id="close" class="close fa-solid fa-xmark"></i>
+
+                </div>
+                <p class="info mt-2">Site Name or Url is not valid, Please follow the rules below :</p>
+                <p class="info-details"><i class="fa-regular fa-circle-right p-2"></i>Site name must contain at least 3
+                    characters</p>
+                <p class="info-details"><i class="fa-regular fa-circle-right p-2"></i>Site URL must be a valid one</p>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
