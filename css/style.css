@@ -111,10 +111,9 @@ form .sites span {
 
 .submitError{
     width: 90%; 
-    /* height: 250px; */
     background-color: white;
     
-    z-index: 2;
+   
 }
 
 .circle {

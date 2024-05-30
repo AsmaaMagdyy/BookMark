@@ -9,6 +9,8 @@ var visitBtn = document.getElementById('visitBtn');
 var deleteBtn = document.getElementById('deleteBtn');
 var errorLayer = document.getElementById('errorLayer');
 var close = document.getElementById('close');
+var errorWindow = document.getElementById('errorWindow');
+
 
 
 submitBtn.onclick = addSite;
@@ -20,18 +22,33 @@ form.addEventListener('submit', function (e) {
     e.preventDefault();
 });
 
-function closeBox(){
-    errorLayer.classList.replace('d-block' , 'd-none');
+function closeBox() {
+    errorLayer.classList.replace('d-block', 'd-none');
 }
-close.addEventListener('click' , closeBox);
+close.addEventListener('click', closeBox);
 
-errorLayer.addEventListener('click' , closeBox);
+errorLayer.addEventListener('click', function () {
+
+    closeBox();
+   
+});
+
+
+errorWindow.addEventListener('click', function (e) {
+    e.stopPropagation;
+    
+});
+
+
+
 
 
 //validation
 
 function validateName() {
-    if (!validation(siteName)) {
+    if(siteName.value.length ==""){
+        return false;
+    }else if (!validation(siteName)) {
         siteName.classList.add('is-invalid');
         siteName.classList.remove('is-valid');
         return false;
@@ -40,7 +57,9 @@ function validateName() {
     }
 }
 function validateUrl() {
-    if (!validation(siteUrl)) {
+    if(siteUrl.value.length ==""){
+        return false;
+    }else if (!validation(siteUrl)) {
         siteUrl.classList.add('is-invalid');
         siteUrl.classList.remove('is-valid');
         return false;
