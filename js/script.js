@@ -35,7 +35,7 @@ errorLayer.addEventListener('click', function () {
 
 
 errorWindow.addEventListener('click', function (e) {
-    e.stopPropagation;
+    e.stopPropagation();
     
 });
 
